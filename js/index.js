@@ -49,6 +49,17 @@ aTags[3].textContent = "Features";
 aTags[4].textContent = "About";
 aTags[5].textContent = "Contact";
 
+const newAtag = document.createElement('a');
+newAtag.textContent = 'home';
+nav.prepend(newAtag);
+
+const newAtag2 = document.createElement('a');
+newAtag2.textContent = 'What\'s Next';
+nav.append(newAtag2);
+
+const newATags = document.querySelectorAll('a');
+newATags.forEach((x) => x.style.color = 'green');
+
  // cta
 const cta = document.querySelector('.cta-text')
  const h1 = document.createElement('h1');
