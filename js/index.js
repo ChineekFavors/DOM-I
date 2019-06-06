@@ -36,6 +36,65 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
+const header = document.querySelector('header');
+
+
+// navigation
+const nav = document.querySelector('nav');
+const aTags = document.querySelectorAll('a');
+aTags[0].textContent = "Services";
+aTags[1].textContent = "Product";
+aTags[2].textContent = "Vision";
+aTags[3].textContent = "Features";
+aTags[4].textContent = "About";
+aTags[5].textContent = "Contact";
+
+ // cta
+const cta = document.querySelector('.cta-text')
+ const h1 = document.createElement('h1');
+ h1.textContent = 'DOM Is Awesome';
+ cta.prepend(h1);
+
+ const btn = document.querySelector('button')
+ btn.textContent = 'Get Started';
+ cta.append(btn);
+
+const img = document.getElementById('cta-img') 
+img.src = "img/header-img.png";
+
+//main content 
+ const h4= document.querySelectorAll('h4');
+ h4[0].textContent = 'Features';
+ h4[1].textContent = 'About';
+ h4[2].textContent = 'Services';
+ h4[3].textContent = 'Product';
+ h4[4].textContent = 'Vision';
+
+const p = document.querySelectorAll('p');
+p[0].textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+p[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+p[2].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+p[3].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+p[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+
+//  const h4 = document.querySelector('.text-content h4');
+// h4.textContent = 'Features';
+
+// const featureP = document.querySelector('.text-content p');
+// featureP.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+// const textContent2 = document.querySelector('.text-content'[1]);
+
+
+const imgMiddle = document.querySelector('#middle-img');
+imgMiddle.src = "img/mid-page-accent.jpg";
+
+
+
+
+
+
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
