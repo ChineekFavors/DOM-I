@@ -41,6 +41,7 @@ const siteContent = {
 
 // navigation
 const nav = document.querySelector('nav');
+//anchor tags assigned text by aTags index
 const aTags = document.querySelectorAll('a');
 aTags[0].textContent = "Services";
 aTags[1].textContent = "Product";
@@ -49,39 +50,44 @@ aTags[3].textContent = "Features";
 aTags[4].textContent = "About";
 aTags[5].textContent = "Contact";
 
+//created new anchor tag and prepended to front of nav.
 const newAtag = document.createElement('a');
 newAtag.textContent = 'home';
 nav.prepend(newAtag);
 
+//created another anchor tag and appended to end of nav.
 const newAtag2 = document.createElement('a');
 newAtag2.textContent = 'What\'s Next';
 nav.append(newAtag2);
 
+// targeted all anchor tags and loop thru and change text color to green
 const newATags = document.querySelectorAll('a');
 newATags.forEach((x) => x.style.color = 'green');
 
- // cta
+ // targeted div class name cta-text and h1 inside of div 
+ //updated h1 with text content then prepend h1 to div
 const cta = document.querySelector('.cta-text')
  const h1 = document.querySelector('.cta-text h1');
  h1.textContent = 'DOM Is Awesome';
  cta.prepend(h1);
 
+//targeted button, added text content
  const btn = document.querySelector('button')
  btn.textContent = 'Get Started';
- cta.append(btn);
 
+//targeted img and updated image source
 const img = document.getElementById('cta-img') 
 img.src = "img/header-img.png";
 
 //main content 
 //selecting all h4 then assigning value using bracket notation const h4
- const h4= document.querySelectorAll('h4');
+ const h4 = document.querySelectorAll('h4');
  h4[0].textContent = 'Features';
  h4[1].textContent = 'About';
  h4[2].textContent = 'Services';
  h4[3].textContent = 'Product';
  h4[4].textContent = 'Vision';
-//select all p elements assigning bracket notation to p
+//select all p elements assigning bracket notation to add text content
 const p = document.querySelectorAll('p');
 p[0].textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 p[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
@@ -89,12 +95,16 @@ p[2].textContent = 'Services content elementum magna eros, ac posuere elvit temp
 p[3].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
 p[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
 
+// query selected middle img and updated source for image
 const imgMiddle = document.querySelector('#middle-img');
 imgMiddle.src = "img/mid-page-accent.jpg";
 
+//query select h4 child of section class name contact
+//updated h4 text content
 const contactH4 = document.querySelector('.contact h4');
 contactH4.textContent = 'Contact';
 
+//used previous querySelectorAll with index to update text content
 p[5].textContent = '23 Way 456 Street Somewhere, USA';
 p[6].textContent = '1 (888) 888-8888';
 p[7].textContent = 'sales@greatidea.io';
