@@ -102,7 +102,7 @@ p[7].textContent = 'sales@greatidea.io';
 // footer
 p[8].textContent = 'Copyright Great Idea! 2018';
 
-// add eventlistener to button to hide image when clicked add background color to red
+// added eventlistener to button to hide image when clicked add background color to red
  btn.addEventListener('click', function(){
     btn.textContent = 'Oh it\'s started';
     btn.style.background === 'red';
