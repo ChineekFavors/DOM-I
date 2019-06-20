@@ -36,7 +36,7 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
-const header = document.querySelector('header');
+
 
 
 // navigation
@@ -62,7 +62,7 @@ newATags.forEach((x) => x.style.color = 'green');
 
  // cta
 const cta = document.querySelector('.cta-text')
- const h1 = document.createElement('h1');
+ const h1 = document.querySelector('.cta-text h1');
  h1.textContent = 'DOM Is Awesome';
  cta.prepend(h1);
 
@@ -74,13 +74,14 @@ const img = document.getElementById('cta-img')
 img.src = "img/header-img.png";
 
 //main content 
+//selecting all h4 then assigning value using bracket notation const h4
  const h4= document.querySelectorAll('h4');
  h4[0].textContent = 'Features';
  h4[1].textContent = 'About';
  h4[2].textContent = 'Services';
  h4[3].textContent = 'Product';
  h4[4].textContent = 'Vision';
-
+//select all p elements assigning bracket notation to p
 const p = document.querySelectorAll('p');
 p[0].textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 p[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
@@ -93,11 +94,31 @@ imgMiddle.src = "img/mid-page-accent.jpg";
 
 const contactH4 = document.querySelector('.contact h4');
 contactH4.textContent = 'Contact';
+
 p[5].textContent = '23 Way 456 Street Somewhere, USA';
 p[6].textContent = '1 (888) 888-8888';
 p[7].textContent = 'sales@greatidea.io';
+
 // footer
 p[8].textContent = 'Copyright Great Idea! 2018';
+
+// add eventlistener to button to hide image when clicked add background color to red
+ btn.addEventListener('click', function(){
+    btn.textContent = 'Oh it\'s started';
+    btn.style.background === 'red';
+    img.style.display = 'none';
+
+    if(btn.style.background === 'red'){
+        btn.style.background = 'white';
+        img.style.display = 'block';
+        btn.textContent = 'Get Started';
+    }
+    else{
+        btn.style.background = 'red';
+        img.style.display = 'none';
+    }
+ });
+
 
 
 
