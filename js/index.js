@@ -43,12 +43,15 @@ const siteContent = {
 const nav = document.querySelector('nav');
 //anchor tags assigned text by aTags index
 const aTags = document.querySelectorAll('a');
-aTags[0].textContent = "Services";
-aTags[1].textContent = "Product";
-aTags[2].textContent = "Vision";
-aTags[3].textContent = "Features";
-aTags[4].textContent = "About";
-aTags[5].textContent = "Contact";
+aTags.forEach((links, i) => {
+  links.textContent = siteContent['nav'][`nav-item-${i + 1}`];
+})
+// aTags[0].textContent = "Services";
+// aTags[1].textContent = "Product";
+// aTags[2].textContent = "Vision";
+// aTags[3].textContent = "Features";
+// aTags[4].textContent = "About";
+// aTags[5].textContent = "Contact";
 
 //created new anchor tag and prepended to front of nav.
 const newAtag = document.createElement('a');
@@ -82,18 +85,19 @@ img.src = "img/header-img.png";
 //main content 
 //selecting all h4 then assigning value using bracket notation const h4
  const h4 = document.querySelectorAll('h4');
- h4[0].textContent = 'Features';
- h4[1].textContent = 'About';
- h4[2].textContent = 'Services';
- h4[3].textContent = 'Product';
- h4[4].textContent = 'Vision';
+h4[0].textContent = siteContent['main-content']['features-h4'];
+h4[1].textContent = siteContent['main-content']['about-h4'];
+h4[2].textContent = siteContent['main-content']['services-h4'];
+h4[3].textContent = siteContent['main-content']['product-h4'];
+h4[4].textContent = siteContent['main-content']['vision-h4'];
+
 //select all p elements assigning bracket notation to add text content
-const p = document.querySelectorAll('p');
-p[0].textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
-p[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-p[2].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-p[3].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-p[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+ const p = document.querySelectorAll('p');
+p[0].textContent = siteContent['main-content']['features-content'];
+p[1].textContent = siteContent['main-content']['about-content'];
+p[2].textContent = siteContent['main-content']['services-content']; 
+p[3].textContent = siteContent['main-content']['product-content'];
+p[4].textContent = siteContent['main-content']['vision-content'];
 
 // query selected middle img and updated source for image
 const imgMiddle = document.querySelector('#middle-img');
@@ -104,15 +108,23 @@ imgMiddle.src = "img/mid-page-accent.jpg";
 const contactH4 = document.querySelector('.contact h4');
 contactH4.textContent = 'Contact';
 
-//used previous querySelectorAll with index to update text content
-p[5].textContent = '23 Way 456 Street Somewhere, USA';
-p[6].textContent = '1 (888) 888-8888';
-p[7].textContent = 'sales@greatidea.io';
+//used previous querySelectorAll const p with index to update text content
+//note sure on how to have a line break for p[5]
+p[5].textContent = `123 Way 456 Street `;
+//adding a child element to append to p[5] to creat a break
+const addressAfterBreak = document.createElement('p')
+addressAfterBreak.textContent = 'Somewhere, USA';
+p[5].append(addressAfterBreak);
+
+p[6].textContent = siteContent['contact']['phone'];
+p[7].textContent = siteContent['contact']['email'];
 
 // footer
-p[8].textContent = 'Copyright Great Idea! 2018';
+p[8].textContent = siteContent['footer']['copyright'];
 
-// added eventlistener to button to hide image when clicked add background color to red
+//just messing around with 
+// added eventlistener to button to hide image when 
+//clicked add background color to red toggle
  btn.addEventListener('click', function(){
     btn.textContent = 'Oh it\'s started';
     btn.style.background === 'red';
