@@ -58,6 +58,10 @@ nav.prepend(frontTag);
 const lastTag = document.createElement('a');
 lastTag.textContent = 'last Stop';
 nav.append(lastTag);
+
+// changing color of nav text to green
+const navsGreen = document.querySelectorAll('header nav a');
+navsGreen.forEach(link => link.style.color = 'green');
             // cta section
 const h1 = document.querySelector('.cta-text h1');
 h1.textContent = siteContent["cta"]["h1"];
