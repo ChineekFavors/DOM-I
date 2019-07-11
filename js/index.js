@@ -49,7 +49,15 @@ aTags[2].textContent = siteContent["nav"]["nav-item-3"];
 aTags[3].textContent = siteContent["nav"]["nav-item-4"];
 aTags[4].textContent = siteContent["nav"]["nav-item-5"];
 aTags[5].textContent = siteContent["nav"]["nav-item-6"];
+// adding two more a tags to nav one in front and other last
+const nav = document.querySelector('nav');
+const frontTag = document.createElement('a');
+frontTag.textContent = 'first Stop';
+nav.prepend(frontTag);
 
+const lastTag = document.createElement('a');
+lastTag.textContent = 'last Stop';
+nav.append(lastTag);
             // cta section
 const h1 = document.querySelector('.cta-text h1');
 h1.textContent = siteContent["cta"]["h1"];
