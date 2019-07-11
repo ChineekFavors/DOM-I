@@ -37,7 +37,19 @@ const siteContent = {
   },
 };
 
-// navigation 
+    // navigation section
+
+  // selecting All a tags and iterating through them
+const aTags = Array.from(document.querySelectorAll('nav a'));
+
+ //  assigning a tags there content value
+aTags[0].textContent = siteContent["nav"]["nav-item-1"];
+aTags[1].textContent = siteContent["nav"]["nav-item-2"];
+aTags[2].textContent = siteContent["nav"]["nav-item-3"];
+aTags[3].textContent = siteContent["nav"]["nav-item-4"];
+aTags[4].textContent = siteContent["nav"]["nav-item-5"];
+aTags[5].textContent = siteContent["nav"]["nav-item-6"];
+
 
 
 
