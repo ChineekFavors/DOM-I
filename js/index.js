@@ -65,7 +65,7 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
       // main-content section
-      // feature sectiond
+      // feature section
 const h4 = document.querySelectorAll('.text-content h4'); 
 h4[0].textContent = siteContent["main-content"]["features-h4"];  
 
@@ -79,16 +79,20 @@ para[1].textContent = siteContent["main-content"]["about-content"];
 const imgMiddle = document.getElementById('middle-img');
 imgMiddle.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
+// bottom-content section
+// services section
+h4[2].textContent = siteContent["main-content"]["services-h4"];
+para[2].textContent = siteContent["main-content"]["services-content"];
 
+// product section
+h4[3].textContent = siteContent["main-content"]["product-h4"];
+para[3].textContent = siteContent["main-content"]["product-content"];
 
+// vision section
+h4[4].textContent = siteContent["main-content"]["vision-h4"];
+para[4].textContent = siteContent["main-content"]["vision-content"];
 
-
-
-
-
-
-
-
+// contact se
 
 
 
