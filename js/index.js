@@ -62,6 +62,7 @@ nav.append(lastTag);
 // changing color of nav text to green
 const navsGreen = document.querySelectorAll('header nav a');
 navsGreen.forEach(link => link.style.color = 'green');
+
             // cta section
 const h1 = document.querySelector('.cta-text h1');
 h1.textContent = siteContent["cta"]["h1"];
@@ -84,27 +85,27 @@ h4[0].textContent = siteContent["main-content"]["features-h4"];
 const para = document.querySelectorAll('.text-content p'); 
 para[0].textContent = siteContent["main-content"]["features-content"]; 
 
-// about section
+          // about section
 h4[1].textContent = siteContent["main-content"]["about-h4"]; 
 para[1].textContent = siteContent["main-content"]["about-content"];
 
 const imgMiddle = document.getElementById('middle-img');
 imgMiddle.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-// bottom-content section
-// services section
+        // bottom-content section
+          // services section
 h4[2].textContent = siteContent["main-content"]["services-h4"];
 para[2].textContent = siteContent["main-content"]["services-content"];
 
-// product section
+          // product section
 h4[3].textContent = siteContent["main-content"]["product-h4"];
 para[3].textContent = siteContent["main-content"]["product-content"];
 
-// vision section
+            // vision section
 h4[4].textContent = siteContent["main-content"]["vision-h4"];
 para[4].textContent = siteContent["main-content"]["vision-content"];
 
-// contact section
+            // contact section
 const h4Contact = document.querySelector('.contact h4');
 h4Contact.textContent = siteContent["contact"]["contact-h4"];
 
@@ -117,6 +118,28 @@ pContact[2].textContent = siteContent["contact"]["email"];
 const parafooter = document.querySelector('footer p');
 parafooter.textContent = siteContent["footer"]["copyright"];
 
+
+      // Stretch Goals section
+
+// updating all paragraphs text to green
+const paraGreen = document.querySelectorAll('p'); 
+paraGreen.forEach(link => link.style.color = 'green');
+
+//adding event listener to button when click 
+//changes text and color of h1 and button content
+btn.addEventListener('click', () => {
+  if(h1.style.color != 'green'){
+    h1.textContent = 'Yes Yes DOM is cool!';
+    h1.style.color = 'green';
+    btn.textContent = 'oh its started';
+    paraGreen.forEach(link => link.style.color = 'black');
+  } else {
+      h1.style.color = 'black';
+      h1.textContent = siteContent["cta"]["h1"];
+      btn.textContent = siteContent["cta"]["button"];
+      paraGreen.forEach(link => link.style.color = 'green');
+    }
+})
 
 
 
