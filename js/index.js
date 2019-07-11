@@ -37,6 +37,110 @@ const siteContent = {
   },
 };
 
+    // nav section
+
+  // selecting All a tags and iterating through them
+const aTags = Array.from(document.querySelectorAll('nav a'));
+
+ //  assigning a tags there content value
+aTags[0].textContent = siteContent["nav"]["nav-item-1"];
+aTags[1].textContent = siteContent["nav"]["nav-item-2"];
+aTags[2].textContent = siteContent["nav"]["nav-item-3"];
+aTags[3].textContent = siteContent["nav"]["nav-item-4"];
+aTags[4].textContent = siteContent["nav"]["nav-item-5"];
+aTags[5].textContent = siteContent["nav"]["nav-item-6"];
+// adding two more a tags to nav one in front and other last
+const nav = document.querySelector('nav');
+const frontTag = document.createElement('a');
+frontTag.textContent = 'first Stop';
+nav.prepend(frontTag);
+
+const lastTag = document.createElement('a');
+lastTag.textContent = 'last Stop';
+nav.append(lastTag);
+
+// changing color of nav text to green
+const navsGreen = document.querySelectorAll('header nav a');
+navsGreen.forEach(link => link.style.color = 'green');
+
+            // cta section
+const h1 = document.querySelector('.cta-text h1');
+h1.textContent = siteContent["cta"]["h1"];
+
+const btn = document.querySelector('.cta-text button');
+btn.textContent = siteContent["cta"]["button"];
+
+const imgCircle = document.querySelector('.cta img');
+imgCircle.setAttribute('src', siteContent["cta"]["img-src"]);
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+      // main-content section
+      // feature section
+const h4 = document.querySelectorAll('.text-content h4'); 
+h4[0].textContent = siteContent["main-content"]["features-h4"];  
+
+const para = document.querySelectorAll('.text-content p'); 
+para[0].textContent = siteContent["main-content"]["features-content"]; 
+
+          // about section
+h4[1].textContent = siteContent["main-content"]["about-h4"]; 
+para[1].textContent = siteContent["main-content"]["about-content"];
+
+const imgMiddle = document.getElementById('middle-img');
+imgMiddle.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+        // bottom-content section
+          // services section
+h4[2].textContent = siteContent["main-content"]["services-h4"];
+para[2].textContent = siteContent["main-content"]["services-content"];
+
+          // product section
+h4[3].textContent = siteContent["main-content"]["product-h4"];
+para[3].textContent = siteContent["main-content"]["product-content"];
+
+            // vision section
+h4[4].textContent = siteContent["main-content"]["vision-h4"];
+para[4].textContent = siteContent["main-content"]["vision-content"];
+
+            // contact section
+const h4Contact = document.querySelector('.contact h4');
+h4Contact.textContent = siteContent["contact"]["contact-h4"];
+
+const pContact = document.querySelectorAll('.contact p'); 
+pContact[0].textContent = siteContent["contact"]["address"];
+pContact[1].textContent = siteContent["contact"]["phone"];
+pContact[2].textContent = siteContent["contact"]["email"];
+
+// footer section
+const parafooter = document.querySelector('footer p');
+parafooter.textContent = siteContent["footer"]["copyright"];
+
+
+      // Stretch Goals section
+
+// updating all paragraphs text to green
+const paraGreen = document.querySelectorAll('p'); 
+paraGreen.forEach(link => link.style.color = 'green');
+
+//adding event listener to button when click 
+//changes text and color of h1 and button content
+btn.addEventListener('click', () => {
+  if(h1.style.color != 'green'){
+    h1.textContent = 'Yes Yes DOM is cool!';
+    h1.style.color = 'green';
+    btn.textContent = 'oh its started';
+    paraGreen.forEach(link => link.style.color = 'black');
+  } else {
+      h1.style.color = 'black';
+      h1.textContent = siteContent["cta"]["h1"];
+      btn.textContent = siteContent["cta"]["button"];
+      paraGreen.forEach(link => link.style.color = 'green');
+    }
+})
+
+
+
+
