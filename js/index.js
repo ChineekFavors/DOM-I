@@ -37,7 +37,7 @@ const siteContent = {
   },
 };
 
-    // navigation section
+    // nav section
 
   // selecting All a tags and iterating through them
 const aTags = Array.from(document.querySelectorAll('nav a'));
@@ -50,10 +50,16 @@ aTags[3].textContent = siteContent["nav"]["nav-item-4"];
 aTags[4].textContent = siteContent["nav"]["nav-item-5"];
 aTags[5].textContent = siteContent["nav"]["nav-item-6"];
 
+// cta section
+const h1 = document.querySelector('.cta-text h1');
+h1.textContent = siteContent["cta"]["h1"];
 
+const btn = document.querySelector('.cta-text button');
+btn.textContent = siteContent["cta"]["button"];
 
-
+const imgCircle = document.querySelector('.cta img');
+imgCircle.setAttribute('src', siteContent["cta"]["img-src"]);
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
