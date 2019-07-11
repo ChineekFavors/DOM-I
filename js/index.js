@@ -50,7 +50,7 @@ aTags[3].textContent = siteContent["nav"]["nav-item-4"];
 aTags[4].textContent = siteContent["nav"]["nav-item-5"];
 aTags[5].textContent = siteContent["nav"]["nav-item-6"];
 
-// cta section
+            // cta section
 const h1 = document.querySelector('.cta-text h1');
 h1.textContent = siteContent["cta"]["h1"];
 
@@ -63,3 +63,39 @@ imgCircle.setAttribute('src', siteContent["cta"]["img-src"]);
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+      // main-content section
+      // feature sectiond
+const h4 = document.querySelectorAll('.text-content h4'); 
+h4[0].textContent = siteContent["main-content"]["features-h4"];  
+
+const para = document.querySelectorAll('.text-content p'); 
+para[0].textContent = siteContent["main-content"]["features-content"]; 
+
+// about section
+h4[1].textContent = siteContent["main-content"]["about-h4"]; 
+para[1].textContent = siteContent["main-content"]["about-content"];
+
+const imgMiddle = document.getElementById('middle-img');
+imgMiddle.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
